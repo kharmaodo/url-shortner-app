@@ -2,11 +2,11 @@ package controllers
 
 import (
 	"database/sql"
+	"github.com/kharmaodo/url-shortner-app/internal/db"
+	"github.com/kharmaodo/url-shortner-app/internal/url"
 	"html/template"
 	"net/http"
 	"strings"
-	"url-shortner-app/internal/db"
-	"url-shortner-app/internal/url"
 )
 
 func Shorten(lite *sql.DB) http.HandlerFunc {
