@@ -1,9 +1,11 @@
 package controllers
 
 import (
+	"fmt"
 	"html/template"
 	"net/http"
 	"strings"
+	"url-shortner-app/internal/url"
 )
 
 func Shorten(w http.ResponseWriter, r *http.Request) {
@@ -19,9 +21,13 @@ func Shorten(w http.ResponseWriter, r *http.Request) {
 	if !strings.HasPrefix(originalUrl, "http://") && !strings.HasPrefix(originalUrl, "https://") {
 		originalUrl = "https://" + originalUrl
 	}
-	//shorten the URL.
+
+	hash, shortUrl := url.Shorten(originalUrl)
+
+	fmt.Println(hash)
+
 	data := map[string]string{
-		"ShortURL": originalUrl,
+		"ShortURL": shortUrl,
 	}
 	t, err := template.ParseFiles("internal/views/shorten.html")
 	if err != nil {
