@@ -1,6 +1,8 @@
 package db
 
-import "database/sql"
+import (
+	"database/sql"
+)
 
 // CreateTable createTable ensures the URLs table exists
 func CreateTable(db *sql.DB) error {

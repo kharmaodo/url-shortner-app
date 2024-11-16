@@ -1,4 +1,4 @@
-module github.com/kharmaodo/github.com/kharmaodo/url-shortner-app
+module github.com/kharmaodo/url-shortner-app
 
 go 1.22
 
