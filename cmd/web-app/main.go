@@ -2,11 +2,12 @@ package main
 
 import (
 	"database/sql"
+	"log"
+	"net/http"
+
 	"github.com/kharmaodo/url-shortner-app/internal/controllers"
 	"github.com/kharmaodo/url-shortner-app/internal/db"
 	_ "github.com/mattn/go-sqlite3"
-	"log"
-	"net/http"
 )
 
 func main() {

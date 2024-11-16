@@ -7,11 +7,11 @@ import (
 // CreateTable createTable ensures the URLs table exists
 func CreateTable(db *sql.DB) error {
 	query := `
-	CREATE TABLE IF NOT EXISTS urlS (
+	CREATE TABLE IF NOT EXISTS urls(
 		id INTEGER PRIMARY KEY AUTOINCREMENT,
 		short_url TEXT NULL,
-		original_url TEXT NULL,
-	);`
+		original_url TEXT NULL
+	)`
 	_, err := db.Exec(query)
 	return err
 }
