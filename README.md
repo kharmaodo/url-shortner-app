@@ -15,6 +15,8 @@ You will see the generate hash and for looking to the SQLite3 database you will 
 ## SQLite3
 
 ```code
+sqlite3 db.sqlite 
+
 sqlite> select * from urls ;
 1|996e1f71|https://github.com
 2|47032296|https://Github.com
